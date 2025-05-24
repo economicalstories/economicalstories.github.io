@@ -12,9 +12,7 @@
       animation: ml-form-embedSubmitLoad 1.2s linear infinite;
     }
     @keyframes ml-form-embedSubmitLoad { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
-    /* Container Styles for MailerLite Form */
     #mlb2-26370912.ml-form-embedContainer { box-sizing: border-box; display: table; margin: 0 auto; width: 100% !important; }
-    /* Include additional MailerLite CSS rules as provided */
   </style>  <!-- Site Styles -->  <style>
     :root { --accent: #006d77; }
     *, *::before, *::after { box-sizing: border-box; }
@@ -22,13 +20,9 @@
     a { color: inherit; text-decoration: none; }
     a:hover { color: var(--accent); }
     img { max-width: 100%; height: auto; display: block; }
-
     .container { width: 90%; max-width: 960px; margin: 0 auto; padding: 1rem 0; }
 
-    header {
-      background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      text-align: center; padding: 1.5rem 1rem; position: sticky; top: 0; z-index: 10;
-    }
+    header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; padding: 1.5rem 1rem; position: sticky; top: 0; z-index: 10; }
     header h1 { margin: 0; font-size: 2.5rem; line-height: 1.1; }
     header p { margin: 0.25rem 0 0; font-style: italic; color: #666; }
 
@@ -39,33 +33,17 @@
 
     main { padding: 2rem 0; }
     section { margin-bottom: 3rem; }
-    section h2 {
-      font-family: 'Palatino Linotype', serif; font-size: 1.75rem;
-      border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem;
-      margin-bottom: 1rem; color: var(--accent);
-    }
+    section h2 { font-family: 'Palatino Linotype', serif; font-size: 1.75rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1rem; color: var(--accent); }
 
     .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; justify-items: center; }
-    .book {
-      background: #fff; padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05); border-radius: 8px; text-align: center;
-    }
+    .book { background: #fff; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05); border-radius: 8px; text-align: center; }
     .book h3 { font-size: 1.1rem; margin: 0.5rem 0; }
     .book img { border-radius: 4px; margin-bottom: 0.75rem; }
 
-    .button {
-      display: inline-block; margin-top: 0.5rem;
-      padding: 0.5rem 1rem; background: var(--accent);
-      color: #fff; border-radius: 4px; font-size: 0.9rem;
-      border: none; cursor: pointer;
-    }
+    .button { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--accent); color: #fff; border-radius: 4px; font-size: 0.9rem; border: none; cursor: pointer; }
     .button:hover { background: #004f5d; }
 
-    footer {
-      background: #fff; text-align: center;
-      padding: 1.5rem 1rem; font-size: 0.9rem; color: #666;
-      border-top: 1px solid #eee;
-    }
+    footer { background: #fff; text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem; color: #666; border-top: 1px solid #eee; }
     footer p { margin: 0.5rem 0; }
 
     @media (max-width: 600px) {
@@ -118,13 +96,13 @@
 </section>
 
 <section id="subscribe">
-  <h2>Stay Updated</h2>
+  <h2>Subscribe to updates</h2>
   <div id="mlb2-26370912" class="ml-form-embedContainer"></div>
   <!-- MailerLite Embed Script -->
   <script>
     (function(m,a,i,l,e,r){
       m['MailerLiteObject']=e;
-      function f(){var c={a:arguments,q:[]};var r=this.push(c);return"function"==typeof r?r:m[e].q.push(c)}
+      function f(){var c={a:arguments,q:[]};var r=this.push(c);return typeof r==='function'?r:m[e].q.push(c)}
       m[e]=m[e]||f; m[e].q=m[e].q||[];
       var s=document.createElement(i), t=document.getElementsByTagName(i)[0];
       s.async=1; s.src=l; t.parentNode.insertBefore(s,t);
