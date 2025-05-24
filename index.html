@@ -9,34 +9,44 @@
     body { margin: 0; padding: 0; font-family: Georgia, serif; color: #333; background: #fafafa; line-height: 1.6; }
     a { color: inherit; text-decoration: none; }
     a:hover { color: var(--accent); }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { width: 90%; max-width: 960px; margin: 0 auto; padding: 1rem 0; }header { position: sticky; top: 0; background: #fff; z-index: 10; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; padding: 1.5rem 1rem; }
+    img { max-width: 100%; height: auto; display: block; }.container { width: 90%; max-width: 960px; margin: 0 auto; padding: 1rem 0; }
+
+/* Header */
+header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; padding: 1.5rem 1rem; position: sticky; top: 0; z-index: 10; }
 header h1 { margin: 0; font-size: 2.5rem; line-height: 1.1; }
 header p { margin: 0.25rem 0 0; font-style: italic; color: #666; }
-.mail-icon { position: absolute; top: 1rem; right: 1rem; font-size: 1.25rem; color: var(--accent); }
 
+/* Navigation */
 nav { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
 nav .container { display: flex; justify-content: center; }
-nav ul { list-style: none; display: flex; gap: 2rem; padding: 0; margin: 0; }
-nav a { display: inline-block; padding: 1rem 0; font-weight: bold; }
+nav ul { list-style: none; display: flex; gap: 1.5rem; padding: 0; margin: 0; flex-wrap: wrap; justify-content: center; }
+nav a { padding: 0.75rem 0; font-weight: bold; }
 
+/* Main Sections */
 main { padding: 2rem 0; }
 section { margin-bottom: 3rem; }
 section h2 { font-family: 'Palatino Linotype', serif; font-size: 1.75rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1rem; color: var(--accent); }
 
+/* Books Grid */
 .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; justify-items: center; }
 .book { background: #fff; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05); border-radius: 8px; text-align: center; }
 .book h3 { font-size: 1.1rem; margin: 0.5rem 0; }
-.button { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--accent); color: #fff; border-radius: 4px; font-size: 0.9rem; }
+
+.button { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--accent); color: #fff; border: none; border-radius: 4px; font-size: 0.9rem; cursor: pointer; }
 .button:hover { background: #004f5d; }
 
+/* Subscribe Form */
+.subscribe-form { max-width: 400px; margin: 0 auto; text-align: center; }
+.subscribe-form input[type=email] { width: 100%; padding: 0.75rem; margin-bottom: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+
+/* Footer */
 footer { background: #fff; text-align: center; padding: 1.5rem 1rem; font-size: 0.9rem; color: #666; border-top: 1px solid #eee; }
 footer p { margin: 0.5rem 0; }
 
+/* Responsive */
 @media (max-width: 600px) {
   header h1 { font-size: 2rem; }
-  nav ul { flex-direction: column; gap: 0.5rem; }
-  nav a { padding: 0.75rem; }
+  nav ul { gap: 1rem; }
   .button { width: 100%; text-align: center; }
 }
 
@@ -44,20 +54,19 @@ footer p { margin: 0.5rem 0; }
 </head>
 <body>
   <header>
-    <a class="mail-icon" href="mailto:contact@economicalstories.com" title="Email the author">✉️</a>
     <h1>Economical Stories</h1>
     <p>By PC Hubbard</p>
-  </header>
-  <nav>
+  </header>  <nav>
     <div class="container">
       <ul>
         <li><a href="#books">Books</a></li>
         <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#author">Author</a></li>
         <li><a href="https://medium.com/@economicalstories" target="_blank">Blog</a></li>
+        <li><a href="mailto:contact@economicalstories.com">Contact</a></li>
       </ul>
     </div>
-  </nav>
-  <main class="container">
+  </nav>  <main class="container">
     <section id="books">
       <h2>Books</h2>
       <div class="book-grid">
@@ -76,13 +85,29 @@ footer p { margin: 0.5rem 0; }
           <a class="button" href="https://www.amazon.com.au/Theory-Moral-Sentences-PC-Hubbard/dp/B0DV3MJYSH" target="_blank">Buy on Amazon</a>
         </div>
       </div>
-    </section>
-    <section id="podcast">
-      <h2>Podcast</h2>
-      <p>The podcast serial is coming soon. <a class="button" href="mailto:contact@economicalstories.com?subject=Notify%20me%20of%20Podcast">Notify me of the launch</a></p>
-    </section>
-  </main>
-  <footer>
+    </section><section id="podcast">
+  <h2>Podcast</h2>
+  <p>The podcast serial is coming soon.</p>
+</section>
+
+<section id="author">
+  <h2>Author</h2>
+  <p>PC Hubbard is an economic policy thinker and storyteller who explores moral questions through flash fiction and narrative experiments. Connect with him on <a href="https://medium.com/@economicalstories" target="_blank">Medium</a> or drop a line at <a href="mailto:contact@economicalstories.com">contact@economicalstories.com</a>.</p>
+</section>
+
+<section id="subscribe">
+  <h2>Stay Updated</h2>
+  <div class="subscribe-form">
+    <!-- Replace ACTION_URL with your Mailchimp or ConvertKit form action -->
+    <form action="ACTION_URL" method="post" target="_blank">
+      <input type="email" name="EMAIL" placeholder="Your email address" required>
+      <button type="submit" class="button">Notify me of new episodes</button>
+    </form>
+    <p style="font-size:0.8rem;color:#666;">We use <a href="https://mailchimp.com" target="_blank">Mailchimp</a> to manage this list—free for up to 2,000 subscribers.</p>
+  </div>
+</section>
+
+  </main>  <footer>
     <p>&copy; 2025 PC Hubbard.</p>
     <p><a href="https://medium.com/@economicalstories" target="_blank">Visit my Medium blog</a></p>
     <p>Contact the author: <a href="mailto:contact@economicalstories.com">contact@economicalstories.com</a></p>
